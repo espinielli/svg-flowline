@@ -1,6 +1,6 @@
 {
   "name": "svg-flowline",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "svg-flowline.js",
   "author": "Ilya Boyandin",
   "description": "A helper function for drawing flow lines (half-barbed arrows) with SVG.",
@@ -9,5 +9,4 @@
     "type": "git",
     "url": "git+ssh://git@github.com/ilyabo/svg-flowline.git"
   }
-
 }
