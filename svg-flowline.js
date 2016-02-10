@@ -28,7 +28,15 @@ function pointBetween(a, b, distFromB) {
   return [b[0] + distFromB * normalized[0], b[1] + distFromB * normalized[1]];
 }
 
-function flowLine(origin, dest, thickness, shortenOriginBy, shortenDestBy) {
+export function flowLinePath(origin, dest, thickness, shortenOriginBy, shortenDestBy) {
+  var p = flowLinePoints(origin, dest, thickness, shortenOriginBy, shortenDestBy);
+  return (
+    'M' + p[0][0] + ',' + p[0][1] + ' L' + p[1][0] + ',' + p[1][1] + ' L' + p[2][0] + ',' + p[2][1] +
+    ' L' + p[3][0] + ',' + p[3][1] + ' L' + p[4][0] + ',' + p[4][1] + ' Z'
+  );
+}
+
+export function flowLinePoints(origin, dest, thickness, shortenOriginBy, shortenDestBy) {
   var a, b, p0, p1, p2, p3, p4, p_, len;
   if (shortenOriginBy == null) {
     shortenOriginBy = 6;
@@ -49,8 +57,6 @@ function flowLine(origin, dest, thickness, shortenOriginBy, shortenDestBy) {
                                                                             // than 0.7 of the arrow length
   p3 = perpendicularSegment(p1, p_, thickness * 2 * arrowheadWidth, p2)[1];
   p4 = perpendicularSegment(a, b, gap * 2, b)[1];
-  return 'M' + p0[0] + ',' + p0[1] + ' L' + p1[0] + ',' + p1[1] + ' L' + p2[0] + ',' + p2[1] + ' L' + p3[0] + ',' + p3[1] + ' L' + p4[0] + ',' + p4[1] + ' Z';
+  return [ p0, p1, p2, p3, p4, p0 ]
 }
 
-
-module.exports = flowLine;
