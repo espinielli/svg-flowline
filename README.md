@@ -5,4 +5,6 @@ The lines look like in this visualization:
 <img src="flowlines.png" style="width:250px">
 
 
-## Example
+## Usage with npm
+
+    npm install --save svg-flowline
