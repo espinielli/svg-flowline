@@ -28,7 +28,7 @@ function pointBetween(a, b, distFromB) {
   return [b[0] + distFromB * normalized[0], b[1] + distFromB * normalized[1]];
 }
 
-export function flowLinePath(origin, dest, thickness, shortenOriginBy, shortenDestBy) {
+function flowLinePath(origin, dest, thickness, shortenOriginBy, shortenDestBy) {
   var p = flowLinePoints(origin, dest, thickness, shortenOriginBy, shortenDestBy);
   return (
     'M' + p[0][0] + ',' + p[0][1] + ' L' + p[1][0] + ',' + p[1][1] + ' L' + p[2][0] + ',' + p[2][1] +
@@ -36,7 +36,7 @@ export function flowLinePath(origin, dest, thickness, shortenOriginBy, shortenDe
   );
 }
 
-export function flowLinePoints(origin, dest, thickness, shortenOriginBy, shortenDestBy) {
+function flowLinePoints(origin, dest, thickness, shortenOriginBy, shortenDestBy) {
   var a, b, p0, p1, p2, p3, p4, p_, len;
   if (shortenOriginBy == null) {
     shortenOriginBy = 6;
@@ -60,3 +60,9 @@ export function flowLinePoints(origin, dest, thickness, shortenOriginBy, shorten
   return [ p0, p1, p2, p3, p4, p0 ]
 }
 
+
+
+module.exports = {
+  flowLinePath: flowLinePath,
+  flowLinePoints: flowLinePoints
+}
