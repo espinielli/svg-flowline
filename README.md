@@ -4,7 +4,11 @@ A helper function for drawing flow lines (half-barbed arrows) with SVG (or Canva
 The lines look like in this visualization: 
 <img src="flowlines.png" style="width:250px">
 
+##  Example
 
-## Usage with npm
+Check out [this observable notebook](https://beta.observablehq.com/@ilyabo/mapping-airline-data-from-a-mapd-database/2) for usage example. 
 
-    npm install --save svg-flowline
+## Usage with npm
+
+    npm install svg-flowline
+    
