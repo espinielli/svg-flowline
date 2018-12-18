@@ -6,7 +6,7 @@ The lines look like in this visualization:
 
 ##  Example
 
-Check out [this observable notebook](https://beta.observablehq.com/@ilyabo/mapping-airline-data-from-a-mapd-database/2) for usage example. 
+Check out [this observable notebook](https://beta.observablehq.com/@ilyabo/mapping-airline-data-from-a-mapd-database/2) for a usage example. 
 
 ## Usage with npm
 
